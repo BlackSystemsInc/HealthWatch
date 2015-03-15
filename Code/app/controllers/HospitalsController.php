@@ -4,7 +4,7 @@ class HospitalsController extends BaseController {
 
     public function getHospitals($q){
         $view_uid = Config::get('custom_config.hospitals_table');
-        $root_url = "https://data.code4sa.org/";
+        $root_url = "https://opendata.socrata.com";
         $app_token = Config::get('custom_config.app_token');
         $response = NULL;
 
@@ -22,7 +22,7 @@ class HospitalsController extends BaseController {
 
         $range = 100000;
 
-        $params = array("\$where" => "within_circle(location_1, $latitude, $longitude, $range)");
+        $params = array("\$where" => "within_circle(location, $latitude, $longitude, $range)");
 
         $response = $socrata->get("/resource/$view_uid.json", $params);
 
@@ -34,21 +34,25 @@ class HospitalsController extends BaseController {
 
         foreach($response as $r){
 
-            $lat1 = $r['location_1']['latitude'];
-            $lon1 = $r['location_1']['longitude'];
+            $lat1 = $r['location']['latitude'];
+            $lon1 = $r['location']['longitude'];
 
-            if(!array_key_exists('classification', $r)){
-                $r['classification'] = "General";
+            if(!array_key_exists('type', $r)){
+                $r['type'] = "General";
             }
-            if(!array_key_exists('overall_performance', $r)){
-                $r['overall_performance'] = "0";
+            if(!array_key_exists('ownership', $r)){
+                $r['ownership'] = "Public";
+            }
+
+            if(!array_key_exists('name', $r)){
+                $r['name'] = "No Name";
             }
 
             $hospitals[] = array(
                 "name"=>$r['name'],
                 "distance"=>round($this->distance($lat1, $lon1, $latitude, $longitude), 2),
-                "type"=>$r['classification'],
-                "rating"=>$r['overall_performance']
+                "type"=>$r['type'],
+                "ownership"=>$r['ownership']
             );
         }
 
@@ -76,7 +80,7 @@ class HospitalsController extends BaseController {
 
             if($i<15){
 
-                $rating = round($h['rating']/20, 0);
+                $rating = "4";//round($h['rating']/20, 0);
 
                 $result .= "<div class='drug_row'>";
                 $result .= $h['name']." (";

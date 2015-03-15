@@ -21,7 +21,7 @@ class MedicineController extends BaseController {
         //Fusion Tables does not support OR WTF?
         //$sql = "SELECT * FROM ".$table." WHERE ProprietaryName CONTAINS IGNORING CASE '".$q."' OR ActiveIngredients CONTAINS IGNORING CASE '".$q."'";
 
-        $sql = "SELECT * FROM ".$table." WHERE ProprietaryName CONTAINS IGNORING CASE '".$q."'";
+        $sql = "SELECT * FROM ".$table." WHERE name CONTAINS IGNORING CASE '".$q."'";
 
         $options = array("sql"=>$sql, "key"=>$key, "sensor"=>"false");
 
@@ -36,34 +36,11 @@ class MedicineController extends BaseController {
         if(array_key_exists('rows', $data)){
             foreach($data['rows'] as $row){
 
-                if(!in_array(strtolower($row[7]), $final_result)){
-                    $final_result[] = strtolower($row[7]);
+                if(!in_array(strtolower($row[1]), $final_result)){
+                    $final_result[] = strtolower($row[1]);
                 }
 
             }
-        }
-
-        //then do similar search for active ingredients :(
-
-        $sql2 = "SELECT * FROM ".$table." WHERE ActiveIngredients CONTAINS IGNORING CASE '".$q."'";
-        $options = array("sql"=>$sql2, "key"=>$key, "sensor"=>"false");
-
-        $url = $base_url . http_build_query($options,'','&');
-
-
-        $page = file_get_contents($url);
-
-        $data = json_decode($page, TRUE);
-
-        if(array_key_exists('rows', $data)){
-            //check if rows already added
-            foreach($data['rows'] as $row){
-
-                if(!in_array(strtolower($row[7]), $final_result)){
-                    $final_result[] = strtolower($row[7]);
-                }
-            }
-
         }
 
         return implode("\n", $final_result);
@@ -79,7 +56,7 @@ class MedicineController extends BaseController {
 
         //Fusion Tables does not support OR WTF?
 
-        $sql = "SELECT * FROM ".$table." WHERE ProprietaryName CONTAINS IGNORING CASE '".$q."'";
+        $sql = "SELECT * FROM ".$table." WHERE name CONTAINS IGNORING CASE '".$q."'";
 
         $options = array("sql"=>$sql, "key"=>$key, "sensor"=>"false");
 
@@ -97,38 +74,7 @@ class MedicineController extends BaseController {
             }
         }
 
-        //then do similar search for active ingredients :(
-
-        $sql2 = "SELECT * FROM ".$table." WHERE ActiveIngredients CONTAINS IGNORING CASE '".$q."'";
-        $options = array("sql"=>$sql2, "key"=>$key, "sensor"=>"false");
-
-        $url = $base_url . http_build_query($options,'','&');
-
-
-        $page = file_get_contents($url);
-
-        $data = json_decode($page, TRUE);
-
-        if(array_key_exists('rows', $data)){
-            //check if rows already added
-            foreach($data['rows'] as $row){
-
-                $drug_id = $row[0];
-                if(!$this->in_multi_array($drug_id, $rows,0)){
-                    array_push($rows, $row);
-                }
-            }
-
-        }
-
         $result = "";
-
-        function compareSEP($a, $b)
-        {
-            return (new MedicineController())->getDrugPrice($a[17]) - (new MedicineController())->getDrugPrice($b[17]);
-        }
-
-        usort($rows, 'compareSEP');
 
         if(count($rows)<1){
             $result .= "No results found for search term. Try a different result <br />";
@@ -149,21 +95,18 @@ class MedicineController extends BaseController {
     public function format_drug_row($row){
         $result = "<div class='drug_row'>";
 
-        $cname = $row[7];
+            $cname = $row[1];
 
-        if($cname==''){
-            $cname = $row[8];
-        }
 
-        $cname = "$cname ($row[9] / $row[10])";
+        $cname = "$cname ($row[3])";
 
-        $type = $row[11];
+        $type = $row[6];
 
         $result .= "<img src='img/".$this->drug_symbol($type)."'>";
 
         $result .= $cname;
 
-        $result .= "<span class='drug_price'>R". round($this->getDrugPrice($row[17]), 1)."</span>";
+        $result .= "<span class='drug_price'>N". $row[5]."</span>";
 
         $result .= "</div>";
 

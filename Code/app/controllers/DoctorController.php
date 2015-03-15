@@ -43,13 +43,10 @@ class DoctorController extends BaseController {
 
         return $result;
     }
-
     public static function singleDoctor($name){
 
         if($name==''){
-
             $result = "Please enter a name!";
-
         }else{
 
             $key = Config::get('custom_config.google_api_key');
@@ -77,25 +74,22 @@ class DoctorController extends BaseController {
             foreach($rows as $doc){
                 $total++;
                 $result .= "<p>";
-                $result .= "Registration Number: ".$doc['4'];
+                $result .= "Address: ".$doc['1'];
                 $result .= "<br />";
-                $result .= "Registration Status: ".$doc['5'];
+                $result .= "Telephone: ".$doc['2'];
                 $result .= "<br />";
-                $result .= "Qualification: ".$doc['8'];
+                $result .= "Email: ".$doc['3'];
                 $result .= "<br />";
-                $result .= "Board: ".$doc['7'];
+                $result .= "Specialty: ".$doc['4'];
                 $result .= "</p>";
             }
-
             if($total<1){
                 $result .= "No registered doctor found with that name!";
             }
-
         }
 
         return $result;
     }
-
 }
 
 ?>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ZiwaphiHealth | Home</title>
+    <title>HealthWatch | Home</title>
     <meta name="description" content="South Africa Health Portal"/>
     <meta name="author" content="Nick Hargreaves"/>
     <meta name="copyright" content="CodeForAfrica Copyright (c) 2014"/>
@@ -204,8 +204,8 @@
 <div class="row">
     <div class="large-12 columns">
         <div class="name">
-              <img src="img/logo.png" style="height:80px;">
-              <div class="h1">Health</div>
+
+              <div class="h1">HealthWatch</div>
         </div>
         <nav class="top-bar" data-topbar="" role="navigation">
             <!-- Title -->
@@ -218,9 +218,7 @@
             <section class="top-bar-section">
                 <!-- Top Bar Right Nav Elements -->
                 <ul class="left" style="font-size: 0.8em;">
-                    <li><a href="http://health.ziwaphi.com" target="_blank">Home</a></li>
-                    <li><a href="http://ziwaphi.com" target="_blank">Ziwaphi</a></li>
-                    <li><a href="http://dlb.ziwaphi.com" target="_blank">Dead Letter Box</a></li>
+                    <li><a href="#" target="_blank">Home</a></li>
                 </ul>
                 <ul class="right">
                     <!-- Search | has-form wrapper -->
@@ -288,10 +286,10 @@
     <div class="large-3 columns app-container">
         <div class="app_header medicine">
             <i class="icon-medkit icon-2x app-icon"></i>
-            <h4>Medicine Prices</h4>
+            <h4>Fake Drugs</h4>
         </div>
         <div class="app_body">
-        What should you pay for your medicine
+            Check if the drugs you are sold are approved by the Ministry of Health
             <p>
             <div class="row collapse">
                 <div class="small-9 columns">
@@ -305,27 +303,6 @@
         </div>
         <div class="app_footer">
             <span class="embed"><a href="#" data-reveal-id="embedModal2"><i class="icon-code"></i> Embed this widget</a></span>
-        </div>
-    </div>
-    <div class="large-3 columns app-container">
-        <div class="app_header generics">
-            <i class="icon-medkit icon-2x app-icon"></i>
-            <h4>Find Generics</h4>
-        </div>
-        <div class="app_body">What generics are available for your drug
-        <p>
-        <div class="row collapse">
-            <div class="small-9 columns">
-                <input type="text" id="medicine_name2" placeholder="e.g. salbutamol or asthavent"/>
-            </div>
-            <div class="small-3 columns" id="searchGeneric">
-                <a href="#" data-reveal-id="myModal"><span class="postfix" id="grabGenerics"><i class="icon-search"></i></span></a>
-            </div>
-        </div>
-        </p>
-        </div>
-        <div class="app_footer">
-            <span class="embed"><a href="#" data-reveal-id="embedModal3"><i class="icon-code"></i> Embed this widget</a></span>
         </div>
     </div>
     <div class="large-3 columns app-container">
@@ -638,9 +615,7 @@
             </div>
             <div class="large-6 columns">
                 <ul class="inline-list right">
-                    <li><a href="http://health.ziwaphi.com" target="_blank">Home</a></li>
-                    <li><a href="http://ziwaphi.com" target="_blank">Ziwaphi</a></li>
-                    <li><a href="http://dlb.ziwaphi.com" target="_blank">Dead Letter Box</a></li>
+                    <li><a href="#" target="_blank">Home</a></li>
                 </ul>
             </div>
         </div>
