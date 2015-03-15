@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cb30635-7bc6-468b-8093-0b6c12e671bc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/app/controllers/DoctorController.php" afterPath="$PROJECT_DIR$/Code/app/controllers/DoctorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/app/controllers/HospitalsController.php" afterPath="$PROJECT_DIR$/Code/app/controllers/HospitalsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/app/controllers/MedicineController.php" afterPath="$PROJECT_DIR$/Code/app/controllers/MedicineController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/app/config/custom_config.php" afterPath="$PROJECT_DIR$/Code/app/config/custom_config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/app/views/hello.php" afterPath="$PROJECT_DIR$/Code/app/views/hello.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/public/main.css" afterPath="$PROJECT_DIR$/Code/public/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ZiwaphiHealth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,15 +28,15 @@
       <file leaf-file-name="hello.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/app/views/hello.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="306" column="10" selection-start="11500" selection-end="11500" vertical-scroll-proportion="0.2650334" vertical-offset="4471" max-vertical-offset="9855">
+            <state line="307" column="23" selection-start="11512" selection-end="11512" vertical-scroll-proportion="0.298441" vertical-offset="4471" max-vertical-offset="9855">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1426421439484" expanded="true" signature="15000:15017" placeholder="..." />
-                <marker date="1426421439484" expanded="true" signature="19093:19110" placeholder="..." />
-                <marker date="1426421439484" expanded="true" signature="20235:20256" placeholder="..." />
-                <marker date="1426421439484" expanded="true" signature="20296:20318" placeholder="..." />
-                <marker date="1426421439484" expanded="true" signature="21832:21849" placeholder="..." />
+                <marker date="1426423532637" expanded="true" signature="14988:15005" placeholder="..." />
+                <marker date="1426423532637" expanded="true" signature="19081:19098" placeholder="..." />
+                <marker date="1426423532637" expanded="true" signature="20223:20244" placeholder="..." />
+                <marker date="1426423532637" expanded="true" signature="20284:20306" placeholder="..." />
+                <marker date="1426423532637" expanded="true" signature="21820:21837" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -669,15 +663,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/app/views/hello.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="10" selection-start="11500" selection-end="11500" vertical-scroll-proportion="0.2650334" vertical-offset="4471" max-vertical-offset="9855">
+        <state line="307" column="23" selection-start="11512" selection-end="11512" vertical-scroll-proportion="0.298441" vertical-offset="4471" max-vertical-offset="9855">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1426421439484" expanded="true" signature="15000:15017" placeholder="..." />
-            <marker date="1426421439484" expanded="true" signature="19093:19110" placeholder="..." />
-            <marker date="1426421439484" expanded="true" signature="20235:20256" placeholder="..." />
-            <marker date="1426421439484" expanded="true" signature="20296:20318" placeholder="..." />
-            <marker date="1426421439484" expanded="true" signature="21832:21849" placeholder="..." />
+            <marker date="1426423532637" expanded="true" signature="14988:15005" placeholder="..." />
+            <marker date="1426423532637" expanded="true" signature="19081:19098" placeholder="..." />
+            <marker date="1426423532637" expanded="true" signature="20223:20244" placeholder="..." />
+            <marker date="1426423532637" expanded="true" signature="20284:20306" placeholder="..." />
+            <marker date="1426423532637" expanded="true" signature="21820:21837" placeholder="..." />
           </folding>
         </state>
       </provider>

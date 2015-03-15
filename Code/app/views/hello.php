@@ -239,7 +239,7 @@
 </div>
 
 <div class="row app_section">
-    <div class="large-3 columns app-container">
+    <div class="large-4 columns app-container">
         <div class="app_header doctors">
             <i class="icon-user-md icon-2x app-icon"></i>
             <h4>Dodgy Doctors</h4>
@@ -283,13 +283,13 @@
             <span class="embed"><a href="#" data-reveal-id="embedModal"><i class="icon-code"></i> Embed this widget</a></span>
         </div>
     </div>
-    <div class="large-3 columns app-container">
+    <div class="large-4 columns app-container">
         <div class="app_header medicine">
             <i class="icon-medkit icon-2x app-icon"></i>
             <h4>Fake Drugs</h4>
         </div>
         <div class="app_body">
-            Check if the drugs you are sold are approved by the Ministry of Health
+            Check if your drugs are approved by the Ministry of Health
             <p>
             <div class="row collapse">
                 <div class="small-9 columns">
@@ -305,7 +305,7 @@
             <span class="embed"><a href="#" data-reveal-id="embedModal2"><i class="icon-code"></i> Embed this widget</a></span>
         </div>
     </div>
-    <div class="large-3 columns app-container">
+    <div class="large-4 columns app-container">
         <div class="app_header hospitals">
             <i class="icon-hospital icon-2x app-icon"></i>
             <h4>Find a Hospital</h4>
